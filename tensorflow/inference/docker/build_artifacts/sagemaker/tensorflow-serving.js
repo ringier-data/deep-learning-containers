@@ -232,3 +232,5 @@ function csv_request(r) {
     builder.push(']}')
     tfs_json_request(r, builder.join(''))
 }
+
+export default {invocations, ping};

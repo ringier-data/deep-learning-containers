@@ -15,7 +15,8 @@ http {
   include /etc/nginx/mime.types;
   default_type application/json;
   access_log /dev/stdout combined;
-  js_include tensorflow-serving.js;
+  js_import ping from "tensorflow-serving.js";
+  js_import invocations from "tensorflow-serving.js";
 
   upstream tfs_upstream {
     %TFS_UPSTREAM%;
